@@ -1,22 +1,36 @@
-# 🌐 Personal Portfolio
+# Personal Portfolio Website
 
-Welcome to my developer portfolio website, built with HTML, CSS, and JavaScript.
-This repo is where I will be storing the code for my portfolio as I build it.
-This site showcases my projects, technical skills, and background as a software developer.
+This is a **minimalistic personal portfolio website** built with **React** and **React-Bootstrap**. It showcases my **resume, projects, education, and certifications** in a organized, tabbed interface.
 
-## 🚀 Live Demo
-I plan to host the website once it is completed on GitHub Pages or Vercel.
+The website is fully responsive, with a simple navigation bar and an option to download my resume. Designed to be hosted easily on **GitHub Pages** or **Vercel** once it is completed and I have decided which service to host the website on.
 
-Past Link Here Once Hosted:
+**Live Demo:** *Link will be added once hosted*  
 
+---
 
- ## 🧰 Tech Stack
-- **Frontend: HTML, CSS, JavaScript  
-- **Framework:  
-- **Deployment: GitHub Pages OR Vercel
+## **Features**
 
-## Design
-- simple and minimalistic approach
-- Resume, projects, education, and certifications will be their own separate tabs under the summary at the top that views can navigate between
-- Resume can be downloaded if desired
-- (Maybe) A navbar at the top
+- Minimalistic and modern design
+- Top navbar for quick navigation
+- Tabbed sections:
+  - Summary / About Me
+  - Resume (downloadable PDF)
+  - Projects
+  - Education
+  - Certifications
+- Responsive layout for desktop and mobile
+- Smooth animations (optional with Framer Motion)
+- Easy deployment to GitHub Pages or Vercel
+
+---
+
+## **Tech Stack**
+
+- **React** – Frontend library for building UI
+- **React-Bootstrap** – Bootstrap components for React
+- **Bootstrap CSS** – Base styling and layout
+- **Framer Motion** *(optional)* – Smooth animations
+- **Vite** – Fast development and build tool
+- **React Router DOM** *(optional)* – For multi-page navigation
+
+---
