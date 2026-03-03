@@ -31,6 +31,6 @@ The website is fully responsive, with a simple navigation bar and an option to d
 - **Bootstrap CSS** – Base styling and layout
 - **Framer Motion** *(optional)* – Smooth animations
 - **Vite** – Fast development and build tool
-- **React Router DOM** *(optional)* – For multi-page navigation
+- **React Router DOM** – For multi-page navigation
 
 ---
