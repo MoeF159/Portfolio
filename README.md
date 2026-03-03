@@ -1,36 +1,16 @@
-# Personal Portfolio Website
+# React + Vite
 
-This is a **minimalistic personal portfolio website** built with **React** and **React-Bootstrap**. It showcases my **resume, projects, education, and certifications** in a organized, tabbed interface.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-The website is fully responsive, with a simple navigation bar and an option to download my resume. Designed to be hosted easily on **GitHub Pages** or **Vercel** once it is completed and I have decided which service to host the website on.
+Currently, two official plugins are available:
 
-**Live Demo:** *Link will be added once hosted*  
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
----
+## React Compiler
 
-## **Features**
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- Minimalistic and modern design
-- Top navbar for quick navigation
-- Tabbed sections:
-  - Summary / About Me
-  - Resume (downloadable PDF)
-  - Projects
-  - Education
-  - Certifications
-- Responsive layout for desktop and mobile
-- Smooth animations (optional with Framer Motion)
-- Easy deployment to GitHub Pages or Vercel
+## Expanding the ESLint configuration
 
----
-
-## **Tech Stack**
-
-- **React** – Frontend library for building UI
-- **React-Bootstrap** – Bootstrap components for React
-- **Bootstrap CSS** – Base styling and layout
-- **Framer Motion** *(optional)* – Smooth animations
-- **Vite** – Fast development and build tool
-- **React Router DOM** – For multi-page navigation
-
----
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
