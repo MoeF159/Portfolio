@@ -72,7 +72,8 @@
   }
 
   @keyframes slow-drift {
-    0% {
+    0%,
+    100% {
       transform: translate(0, 0);
     }
     25% {
@@ -83,9 +84,6 @@
     }
     75% {
       transform: translate(30px, 10px);
-    }
-    100% {
-      transform: translate(0, 0);
     }
     
   }
