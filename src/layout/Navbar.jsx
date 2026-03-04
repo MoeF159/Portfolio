@@ -18,7 +18,7 @@ export const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
     return (
-    <header className="fixed top-0 left-0 right-0 bg-transparent py-5">
+    <header className="fixed top-0 left-0 right-0 bg-transparent py-5 z-50">
         <nav className="container mx-auto px-6 flex items-center justify-between">
             <a href="#" className="text-xl font-bold tracking-tight hover:text-primary">
                 OF<span className="text-primary">.</span>
