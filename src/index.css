@@ -2,18 +2,18 @@
 
 @theme {
   --color-background: #0f1418;
-  --color-forground: #f0f2f5;
+  --color-foreground: #f0f2f5;
 
   --color-card: #141a1f;
 
   --color-primary: #20b2a6;
-  --color-primary-forground: #ffffff;
+  --color-primary-foreground: #ffffff;
 
   --color-secondary: #1f2830;
-  --color-secondary-forground: #20b2a6;
+  --color-secondary-foreground: #20b2a6;
 
   --color-muted: #252e37;
-  --color-muted-forground: #7a8491;
+  --color-muted-foreground: #7a8491;
 
   --color-border: #242b32;
 
@@ -30,7 +30,7 @@
 
   body {
     background-color: var(--color-background);
-    color: var(--color-forground);
+    color: var(--color-foreground);
     font-family: 'Inter', sans-serif;
   }
 
@@ -39,4 +39,18 @@
     font-family: 'Playfair Display', serif;
   }
 
+}
+
+@layer components {
+  .glass{
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+
+  .glass-strong{
+    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    backdrop-filter: blur(24px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+  }
 }
