@@ -1,5 +1,5 @@
 
 
 export const Hero = () => {
-    return <section> vgfsngnd</section>;
+    return <section> </section>;
 }
