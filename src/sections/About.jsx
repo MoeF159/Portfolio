@@ -66,10 +66,20 @@ export const About = () => {
                             Outside of coding, I'm usually exploring new technologies, refining my projects, or thinking about the next idea I want to build. 
                             At the end of the day, I just enjoy creating things with code and seeing them come to life.
                         </p>
+                    </div>
 
+                    <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
+                        <p className="text-lg font-medium italic text-foreground">
+                            My mission is to build thoughtful, reliable software that solves real problems and creates meaningful experiences for users. 
+                            I aim to continuously grow as a developer by learning new technologies, improving my problem-solving skills, and writing clean, maintainable code. 
+                            Through curiosity, persistence, and hands-on creation, I strive to turn ideas into practical applications that make technology more useful and accessible.
+                        </p>
                     </div>
                 </div>
+
+                {/*  Right Column - Highlights */}
             </div>
+
         </div>
     </section>
 
