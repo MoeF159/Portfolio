@@ -81,14 +81,15 @@ export const Navbar = () => {
                         {navLinks.map((link) => (
                             <a 
                                 key={link.href} 
-                                href={link.href} 
-                            className="text-lg text-muted-foreground hover:text-foreground py-2"
-                        >
+                                href={link.href}
+                                onClick={() => setIsMobileMenuOpen(false)} 
+                                className="text-lg text-muted-foreground hover:text-foreground py-2"
+                            >
                             {link.label}
                         </a>
                     ))}
 
-                        <Button size="sm"> Contact Me</Button>
+                        <Button onClick={() => setIsMobileMenuOpen(false)}> Contact Me</Button>
                     </div>
                 </div>)}
     </header>);
