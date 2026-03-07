@@ -1,5 +1,5 @@
-import { Mail, Phone, MapPin } from "lucide-react";
-
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Button } from "@/components/button";
 const ContactInfo = [
     {
         icon: Mail,
@@ -67,7 +67,7 @@ export const Contact = () => {
               id="name"
               type="text"
               required
-              placeholder="John Doe"
+              placeholder="Your Name"
               className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
             />
           </div>
@@ -80,7 +80,7 @@ export const Contact = () => {
               id="email"
               type="text"
               required
-              placeholder="JohnDoe@example.com"
+              placeholder="YourEmail@example.com"
               className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
             />
           </div>
@@ -92,9 +92,16 @@ export const Contact = () => {
             <textarea
               id="message"
               rows="4"
+              required
+              placeholder="Your Message"
               className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
             ></textarea>
           </div>
+
+          <Button>
+            Send Message
+            <Send />
+          </Button>
 
         </form>
       </div>
