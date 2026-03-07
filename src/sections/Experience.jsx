@@ -1,4 +1,14 @@
 const experiences = [
+    
+    {
+    period: "2019 - 2023",
+    company: "University of Pittsburgh",
+    role: "B.S. in Computer Science",
+    description: "Built foundational skills in programming, algorithms, data structures, and software development principles.",
+    technologies: ['Java', 'Python', 'C++', 'SQL', 'Git', 'Linux'],
+    current: false,
+    },
+    
     {
         period: "2023 - 2025",
         company: "Dunkin",
