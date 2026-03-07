@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { Button } from "@/components/button";
+import { Button } from "@/components/Button";
 const ContactInfo = [
     {
         icon: Mail,
@@ -98,7 +98,7 @@ export const Contact = () => {
             ></textarea>
           </div>
 
-          <Button>
+          <Button className="w-full" type="submit" size="lg">
             Send Message
             <Send />
           </Button>
