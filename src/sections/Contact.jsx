@@ -188,7 +188,7 @@ export const Contact = () => {
                             <>Sending..."</>
                         ) : (
                         <>
-                            "Send Message"
+                            Send Message
                             <Send className="w-5 h-5" />
                         </>)}
                 </Button>
