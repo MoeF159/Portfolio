@@ -1,6 +1,7 @@
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/Button";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 const ContactInfo = [
     {
         icon: Mail,
@@ -32,10 +33,53 @@ export const Contact = () => {
         message: ""
     })
 
+    const [isLoading, setIsLoading] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState({
+        type: null,
+        message: ""
+    });
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         // Handle form submission logic here
         console.log(formData); 
+
+        setIsLoading(true);
+        setSubmitStatus({ type: null, message: "" });
+
+        try{
+            const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+            const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+            if(!serviceID || !templateID || !publicKey){
+                throw new Error("EmailJS configuration is missing. Check the environment variables.");
+            }
+
+            await emailjs.send(serviceID, templateID, {
+                name: formData.name,
+                email: formData.email,
+                message: formData.message
+            }, publicKey);
+
+            setSubmitStatus({ 
+                type: "success", 
+                message: "Message sent successfully!" 
+            });
+            setFormData({ 
+                name: "", 
+                email: "", 
+                message: "" });
+
+        }catch(err){
+            console.error("EmailJS Error:", err);
+            setSubmitStatus({ 
+                type: "error", 
+                message: "Failed to send message. Please try again." 
+            });
+        }finally{
+            setIsLoading(false);
+        }
     }
     return (
         <section id="contact" className="py-32 relative overflow-hidden">
@@ -134,11 +178,41 @@ export const Contact = () => {
                     ></textarea>
                 </div>
 
-                <Button className="w-full" type="submit" size="lg">
-                    Send Message
-                    <Send />
+                <Button 
+                className="w-full" 
+                type="submit" 
+                size="lg" 
+                disabled={isLoading}
+                >
+                    {isLoading ? (
+                            <>Sending..."</>
+                        ) : (
+                        <>
+                            "Send Message"
+                            <Send className="w-5 h-5" />
+                        </>)}
                 </Button>
 
+
+                {submitStatus.type && (
+                    <div 
+                    className={`flex items-center gap-3 p-4 rounded-xl 
+                        ${submitStatus.type === 'success' 
+                            ? 'bg-green-500/10 border border-green-500/20 text-green-500' 
+                            : 'bg-red-500/10 border border-red-500/20 text-red-500'
+                        }`}
+                    >
+                        {submitStatus.type === 'success' ? (
+                            <CheckCircle className="w-5 h-5 shrink-0" />
+                        ) : (
+                            <AlertCircle className="w-5 h-5 shrink-0" />
+                        )}
+
+                        <p className="text-sm">
+                            {submitStatus.message}
+                        </p>
+                    </div>
+                )}
                 </form>
             </div>
 
